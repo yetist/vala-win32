@@ -3,7 +3,7 @@ c = '/usr/bin/x86_64-w64-mingw32-gcc'
 cpp = '/usr/bin/x86_64-w64-mingw32-g++'
 ar = '/usr/bin/x86_64-w64-mingw32-ar'
 strip = '/usr/bin/x86_64-w64-mingw32-strip'
-pkgconfig = '/mingw64/bin/x86_64-mingw64-pkg-config'
+pkgconfig = '/usr/bin/pkg-config'
 windres = '/usr/bin/x86_64-w64-mingw32-windres'
 exe_wrapper = 'wine64'
 
@@ -14,7 +14,6 @@ root = '/mingw64'
 # Directory that contains 'bin', 'lib', etc for the toolchain and system libraries
 #sys_root = '/usr/x86_64-w64-mingw32'
 sys_root = '/mingw64'
-#PKG_CONFIG_PATH_CUSTOM
 pkg_config_libdir = '/usr/x86_64-w64-mingw32/lib/pkgconfig:/mingw64/lib/pkgconfig'
 
 [host_machine]
