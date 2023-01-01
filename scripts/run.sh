@@ -42,6 +42,10 @@ get_deps()
   done
 }
 
+if [ ! -f $dest_dir/libvala-win32-1.dll ]; then
+  cp $dest_dir/../src/libvala-win32-1.dll $dest_dir
+fi
+
 get_deps $exe
 
 $exe
