@@ -103,3 +103,35 @@ EOL
 ```
 
 
+
+Building on Archlinux
+-------------------------------------------
+
+1. Install mingw64 toolchains and wine:
+
+```
+sudo pacman -Sy mingw-w64-binutils mingw-w64-crt mingw-w64-gcc mingw-w64-headers mingw-w64-winpthreads wine
+```
+
+2. Enable mingw64 repo in /etc/pacman.conf:
+
+```
+[mingw64]
+SigLevel = TrustAll
+Server = https://repo.msys2.org/mingw/$repo/
+Server = https://mirrors.ustc.edu.cn/msys2/mingw/$repo/
+```
+
+3. Install msys library use pacman.
+
+```
+sudo pacman -Sy mingw-w64-x86_64-libgee #...
+```
+
+4. Build and run:
+
+```
+meson setup _build --cross-file ./cross-files/linux-mingw-w64-64bit.txt
+meson compile -C _build
+./scripts/run.sh _build/example/encryptor.exe
+```
